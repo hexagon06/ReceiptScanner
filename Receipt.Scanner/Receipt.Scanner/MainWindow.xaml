@@ -3,6 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="buttonSelectFile" Content="Choose File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,10,0,0" Click="buttonSelectFile_Click"/>
+        <Label x:Name="labelFile" Content="&lt;file name&gt;" Margin="90,6,90,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonStartScan" Content="Scan" Margin="0,10,10,0" HorizontalAlignment="Right" Width="75" Click="buttonStartScan_Click" IsEnabled="False" Height="22" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="fieldOutput" TextWrapping="Wrap" Margin="10,37"></TextBox>
+
+        <Button x:Name="buttonExport" Content="Export" Margin="10,0,0,10" HorizontalAlignment="Left" Width="75" IsEnabled="False" Click="buttonExport_Click" Height="22" VerticalAlignment="Bottom"/>
+
+
     </Grid>
 </Window>
