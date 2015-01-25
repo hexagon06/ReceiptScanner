@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receipt.Scanner", "Receipt.Scanner\Receipt.Scanner.csproj", "{16D7409B-32A5-41DF-9121-6ADC6FBEE474}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receipt.Test.Scanner", "Test.Receipt.Scanner\Receipt.Test.Scanner.csproj", "{882F135D-4C69-49B7-B93B-97B9ECD49F15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{16D7409B-32A5-41DF-9121-6ADC6FBEE474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D7409B-32A5-41DF-9121-6ADC6FBEE474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D7409B-32A5-41DF-9121-6ADC6FBEE474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882F135D-4C69-49B7-B93B-97B9ECD49F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882F135D-4C69-49B7-B93B-97B9ECD49F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882F135D-4C69-49B7-B93B-97B9ECD49F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882F135D-4C69-49B7-B93B-97B9ECD49F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

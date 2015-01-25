@@ -24,6 +24,7 @@ namespace Receipt.Scanner
     {
         private string FileName { get; set; }
         private string ScanResult { get; set; }
+        private IDictionary<string, decimal> ConvertedResult { get; set; }
 
         public MainWindow()
         {
@@ -49,11 +50,43 @@ namespace Receipt.Scanner
                 ScanResult = Scanner.Scan(stream);
             }
             fieldOutput.Text = ScanResult;
+            buttonConvert.IsEnabled = ScanResult.Length > 0;
         }
 
         private void buttonExport_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void buttonConvert_Click(object sender, RoutedEventArgs e)
+        {
+            ConvertedResult = Scanner.Convert(ScanResult);
+
+            SetData(ConvertedResult);
+
+            fieldOutput.Visibility = System.Windows.Visibility.Collapsed;
+            datagridResults.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void SetData(IDictionary<string, decimal> convertedResult)
+        {
+            List<DataObject> list = new List<DataObject>();
+            foreach (var result in convertedResult)
+	{
+		 var data = new DataObject(){
+              Name = result.Key,
+              Value = result.Value
+         };
+                list.Add(data);
+            }
+
+            datagridResults.ItemsSource = list;
+        }
+
+        public class DataObject
+        {
+            public string Name { get; set; }
+            public decimal Value { get; set; }
         }
     }
 }
